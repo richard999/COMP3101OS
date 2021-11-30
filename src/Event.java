@@ -1,6 +1,12 @@
 
 public class Event
-{
+{   //method that returns process information
+    /**
+     * 
+     * @return processName
+     * @return startTime
+     * @return finishTime
+     */
     private final int processName;
     private final int startTime;
     private int finishTime;
@@ -14,16 +20,28 @@ public class Event
     
     public int getProcessName()
     {
+        /**
+         * Returns the name of the process 
+         * @return processName 
+         */
         return processName;
     }
     
     public int getStartTime()
     {
+        /**
+         * Returns the start time of the process 
+         * @return startTime 
+         */   
         return startTime;
     }
     
     public int getFinishTime()
     {
+        /**
+         * Returns the finish time of the process 
+         * @return finishTime 
+         */
         return finishTime;
     }
     
