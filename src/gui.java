@@ -15,8 +15,10 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
-
+/**
+*/
 public class gui {
+    
     /** 
      * Variables declaration - do not modify//GEN-BEGIN:variables
      */
@@ -36,10 +38,10 @@ public class gui {
     private JLabel tatResultLabel;
     private JComboBox <String> option;
     private DefaultTableModel model;
-    /**
-     * / End of variables declaration//GEN-END:variables 
-     */
     
+    /**
+     * Declaration of Constructor gui 
+     */
     public gui(){
         /**
          * /GEN-BEGIN:initComponents for GUI
@@ -66,19 +68,13 @@ public class gui {
                 model.addRow(new String[]{"", "", "", "", "", ""});
             } 
         });
-        /**
-         * /constructor for creating the "Add" button// GEN-END
-         */
         
-        /**
-         * /constructor for creating the "Remove" button// GEN-BEGIN
-         */
         removeBtn = new JButton("Remove");
         removeBtn.setBounds(390, 280, 85, 25);
         removeBtn.setFont(new Font("Segoe UI", Font.PLAIN, 11));
         removeBtn.addActionListener(new ActionListener(){
         /**
-         * /constructor for creating the "Remove" button// GEN-END
+         * Method for creating Giving function to the "Remove" Button
          */
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -122,7 +118,7 @@ public class gui {
         computeBtn.setFont(new Font("Segoe UI", Font.PLAIN, 11));
         computeBtn.addActionListener(new ActionListener(){
         /**
-         * constructor for creating the "Compute" button// GEN-END
+         * Method for giving action to the "Compute" button// GEN-END
          */
             
             @Override
