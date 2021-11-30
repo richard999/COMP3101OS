@@ -17,6 +17,10 @@ import javax.swing.table.DefaultTableModel;
 
 
 public class gui {
+    /** 
+     * Variables declaration - do not modify//GEN-BEGIN:variables
+     */
+    
     private JFrame frame;
     private JPanel mainPanel;
     private CustomPanel chartPanel;
@@ -32,15 +36,27 @@ public class gui {
     private JLabel tatResultLabel;
     private JComboBox <String> option;
     private DefaultTableModel model;
+    /**
+     * / End of variables declaration//GEN-END:variables 
+     */
     
     public gui(){
+        /**
+         * /GEN-BEGIN:initComponents for GUI
+         */
         model = new DefaultTableModel(new String[]{"Process", "Arrival Time", "Burst Time", "Priority", "WaitTime", "TurnAroundTime"}, 0);
         
+        /**
+         * /constructor for creating the table in the GUI
+         */
         table = new JTable(model);
         table.setFillsViewportHeight(true);
         tablePane = new JScrollPane(table);
         tablePane.setBounds(25, 25, 450, 250);
         
+        /**
+         * /constructor for creating the "Add" button// GEN-BEGIN
+         */
         addBtn = new JButton("Add");
         addBtn.setBounds(300, 280, 85, 25);
         addBtn.setFont(new Font("Segoe UI", Font.PLAIN, 11));
@@ -50,11 +66,20 @@ public class gui {
                 model.addRow(new String[]{"", "", "", "", "", ""});
             } 
         });
+        /**
+         * /constructor for creating the "Add" button// GEN-END
+         */
         
+        /**
+         * /constructor for creating the "Remove" button// GEN-BEGIN
+         */
         removeBtn = new JButton("Remove");
         removeBtn.setBounds(390, 280, 85, 25);
         removeBtn.setFont(new Font("Segoe UI", Font.PLAIN, 11));
         removeBtn.addActionListener(new ActionListener(){
+        /**
+         * /constructor for creating the "Remove" button// GEN-END
+         */
             @Override
             public void actionPerformed(ActionEvent e) {
                 int row = table.getSelectedRow();
@@ -64,7 +89,9 @@ public class gui {
                 }
             }
         });
-        
+        /**
+         * Declares the chart creation and parameters// GEN-BEGIN
+         */
         chartPanel = new CustomPanel();
 
         chartPanel.setBackground(Color.WHITE);
@@ -82,11 +109,21 @@ public class gui {
         
         option = new JComboBox <String> (new String[]{"FCFS", "SJF", "SRT", "RR"});
         option.setBounds(390, 420, 85, 20);
-        
+         /**
+         * Declares the chart creation and parameters// GEN-END
+         */
+       
+
+        /**
+         * constructor for creating the "Compute" button// GEN-BEGIN
+         */
         computeBtn = new JButton("Compute");
         computeBtn.setBounds(390, 450, 85, 25);
         computeBtn.setFont(new Font("Segoe UI", Font.PLAIN, 11));
         computeBtn.addActionListener(new ActionListener(){
+        /**
+         * constructor for creating the "Compute" button// GEN-END
+         */
             
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -158,7 +195,14 @@ public class gui {
                 chartPanel.setTimeline(scheduler.getTimeline());
             }
         });
-        
+        /**
+         * GEN-END:initComponents for GUI
+         */
+
+        /**
+         * Create and display GUI
+         */
+
         mainPanel = new JPanel(null);
         mainPanel.setPreferredSize(new Dimension(500, 500));
         mainPanel.add(tablePane);
@@ -179,11 +223,17 @@ public class gui {
         frame.add(mainPanel);
         frame.pack();
     }
-    
+     
+    /**
+     * The main constructor for the GUI// GEN-BEGIN
+     */ 
     public static void main(String[] args)
     {
         new gui();
     }
+    /**
+     * The main constructor for the GUI// GEN-END
+     */ 
     
     class CustomPanel extends JPanel
     {   
