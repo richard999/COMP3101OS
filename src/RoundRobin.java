@@ -6,7 +6,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Queue;
-//Use a class to keep track of the current processes status.
+
 
 
 /**
@@ -16,7 +16,16 @@ import java.util.Queue;
  * Richard Ebanks : 620120063
  * Donald Berry : 620130142
  */
+
+//Use a class to keep track of the current processes status.
+
 public class RoundRobin extends CPUScheduler{
+    /**Declaration of varibles 
+     * @param burstTime
+     * @param arrivalTime
+     * @param completionTime
+     * @param remainingRunTime
+     */
     public int burstTime;
     public int arrivalTime;
     public int completionTime;
@@ -24,6 +33,14 @@ public class RoundRobin extends CPUScheduler{
 
     // Initialize processes with an arrival time and burst time
     public RoundRobin(int arrivalTimeValue, int burstTimeValue) {
+        
+        /**
+         * Value at burstTime will be set to burstTimeValue
+         * Value at arrivalTime will be set to arrivalTimeValue
+         * Value at completionTime will be set to -1
+         * Value at remainingRunTime will be set to burstTime
+         */
+        
         burstTime = burstTimeValue;
         arrivalTime = arrivalTimeValue;
         completionTime = -1;
@@ -36,6 +53,17 @@ public class RoundRobin extends CPUScheduler{
         
     
         public static void main(String[] args) {
+            
+            /**
+             * 
+             * @param waity
+             * @param arrival
+             * @param burst
+             * 
+             * @return waity
+             * System will out put the current value of waity which is the average wait time
+             */
+            
             System.out.println("Average Waiting time");
     
             float waity;
@@ -102,6 +130,10 @@ public class RoundRobin extends CPUScheduler{
             }
     
             // Calculate total waiting time
+            /**
+             * @param totalWaitTime
+             * @return totalWaitTime
+             */
             float totalWaitTime = 0;
     
             for (RoundRobin checkProcess : finishedProcesses) {
