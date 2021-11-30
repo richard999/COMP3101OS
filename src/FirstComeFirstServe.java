@@ -1,12 +1,17 @@
 import java.util.*;
+
 /**
- * 
+ * Noel Powell : 620128757
+ * Tyreke McLean : 620129957
+ * Michael Layne : 620106364
+ * Richard Ebanks : 620120063
+ * Donald Berry : 620130142
  */
 public class FirstComeFirstServe extends CPUScheduler
 {
-//method to calculate the waiting time
+
 /**
- * 
+ * method to calculate the waiting time
  * @param processes
  * @param n
  * @param burstTime
@@ -19,9 +24,9 @@ for (int i = 1; i < n; i++)
 waitingTime[i] = burstTime[i - 1] + waitingTime[i - 1];
 }
   
-//method to calculate the turn around time
+//
 /**
- * 
+ * method to calculate the turn around time
  * @param processes
  * @param n
  * @param burstTime
