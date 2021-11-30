@@ -23,7 +23,7 @@ public class ShortestJobFirst extends CPUScheduler{
 }
 
     /**
-     * 
+     * Calculate the waiting time 
      * @param proces
      * @param i
      * @param wait
@@ -75,7 +75,7 @@ public class ShortestJobFirst extends CPUScheduler{
     }
 
     /**
-     * 
+     * Calcutes the turn around 
      * @param proces
      * @param i
      * @param wait
@@ -92,7 +92,7 @@ public class ShortestJobFirst extends CPUScheduler{
 }
 
     /**
-     * 
+     * Calculates the Average Time
      * @param proces
      * @param i
      */
@@ -123,7 +123,7 @@ public class ShortestJobFirst extends CPUScheduler{
     }
 
     /**
-     * 
+     * The main constuctor for working out the shortest job first
      * @param args
      */
     public static void main(String[] args)
@@ -206,6 +206,3 @@ public class ShortestJobFirst extends CPUScheduler{
     
     
 }
-
-
-
