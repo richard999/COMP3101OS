@@ -116,31 +116,7 @@ public class gui {
                         return;
                 }
                 
-                for (int i = 0; i < model.getRowCount(); i++)
-                {
-                    int process = (int) model.getValueAt(i, 0);
-                    int at = Integer.parseInt((String) model.getValueAt(i, 1));
-                    int bt = Integer.parseInt((String) model.getValueAt(i, 2));
-                    int pl;
-                    
-                    if (selected.equals("PSN") || selected.equals("PSP"))
-                    {
-                        if (!model.getValueAt(i, 3).equals(""))
-                        {
-                            pl = Integer.parseInt((String) model.getValueAt(i, 3));
-                        }
-                        else
-                        {
-                            pl = 1;
-                        }
-                    }
-                    else
-                    {
-                        pl = 1;
-                    }
-                                        
-                    scheduler.add(new Row(process, at, bt, pl));
-                }
+                
                 
                 scheduler.process();
                 
