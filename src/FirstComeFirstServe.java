@@ -41,20 +41,29 @@ turnAroundTime[i] = burstTime[i] + waitingTime[i];
 
 public static void main(String[] args)
    {
-       //variable declaration and initialization
+/**
+ * variable declaration and initialization
+ */
+
 int numProcess = 5;
   
-//array declaration
+/**
+ * array declaration
+ */
 int processId[] = new int[] {0, 1, 2, 3, 4};
 int arrivalTime[] = new int[] {0, 1, 4, 5, 10};
 int burstTime[] = new int[] {10, 2, 4, 1, 3};
   
-//array declaration
+/**
+ * array declaration
+ */
 int waitingTime[] = new int[numProcess];
 int turnAroundTime[] = new int[numProcess];
 double totalWaitintTime = 0.0, totalTurnAroundTime = 0.0;
   
-//method calling
+/**
+ * /method calling
+ */
 findWaitingTime(processId, numProcess, burstTime, waitingTime);
   
 for(int i=0; i<numProcess; i++)
@@ -65,10 +74,14 @@ else
 waitingTime[i] = 0;
 }
   
-//method calling
+/**
+ * method calling
+ */
 findTurnAroundTime(processId, numProcess, burstTime, waitingTime, turnAroundTime);
   
-//display waiting time of each process
+/**
+ * display waiting time of each process
+ */
 for(int i=0; i<numProcess; i++)
 {
 System.out.println("Process "+processId[i]+" waiting time = "+waitingTime[i]);
@@ -77,17 +90,23 @@ totalWaitintTime = totalWaitintTime + waitingTime[i];
   
 System.out.println();
   
-//display trun around time of each process
+/**
+ * display trun around time of each process
+ */
 for(int i=0; i<numProcess; i++)
 {
 System.out.println("Process "+processId[i]+" turn around time = "+turnAroundTime[i]);
 totalTurnAroundTime = totalTurnAroundTime + turnAroundTime[i];
 }
   
-//display average turn around time
+/**
+ * display average turn around time
+ */
 System.out.println("\n\nAverage turn around time = "+(double)totalTurnAroundTime/numProcess);
   
-//display average waiting time
+/**
+ * display average waiting time
+ */
 System.out.println("\nAverage waiting time = "+(double)totalWaitintTime/numProcess);
    }
 
