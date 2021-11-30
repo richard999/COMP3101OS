@@ -2,16 +2,21 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+
 /**
- * 
+ * Noel Powell : 620128757
+ * Tyreke McLean : 620129957
+ * Michael Layne : 620106364
+ * Richard Ebanks : 620120063
+ * Donald Berry : 620130142
  */
 public class ShortestJobFirst extends CPUScheduler{
     private int process, burst, arrival;
 /**
- * 
- * @param pro
- * @param burs
- * @param arriv
+ * Method constructor for ShortestJobFirst
+ * @param pro Process ID
+ * @param burs Burst Time
+ * @param arriv Arrival Time
  */
     public ShortestJobFirst(int pro, int burs, int arriv){
         this.process=pro;
